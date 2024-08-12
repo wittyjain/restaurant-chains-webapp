@@ -6,10 +6,10 @@ import greaterthan from '../../assets/greater-than.svg'
 
 function NavBar() {
   return (
-    <div className='text-white bg-red-400 flex justify-between uppercase  px-3 py-2 items-center opacity-90'>
+    <div className='text-white bg-black h-28 flex justify-between uppercase  px-3 py-2 items-center opacity-80 sticky z-[20] top-0 '>
       <img src={logo} alt="logo" className='h-auto' />
-      <ul className='flex bg-blue-700 gap-x-4 text-xs font-semibold  tracking-widest'>
-        <li className=' hover:text-gray-50 hover:opacity-90 cursor-pointer'>corporate</li>
+      <ul className='flex gap-x-4 text-xs font-semibold  tracking-widest'>
+        <li className=' hover:text-gray-500 hover:opacity-90 cursor-pointer duration-200'>corporate</li>
         <li>philosophy</li>
         <li>restaurant</li>
         <li>wedding&party</li>

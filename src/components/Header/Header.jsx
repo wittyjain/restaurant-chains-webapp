@@ -1,9 +1,12 @@
 import React from "react";
+import hugevid from '../../assets/huge-vid.mp4'
+import NavBar from "../NavBar/NavBar";
 
 function Header() {
     return(
         <div>
-            <h1 className="bg-yellow-200" >Welcome</h1>
+            <NavBar />
+            <video autoPlay loop muted><source src={hugevid} /></video>
         </div>
     )
 }

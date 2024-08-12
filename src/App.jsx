@@ -8,7 +8,9 @@ function App() {
 
   return (
     <div className='bg-black h-screen'>
-    <NavBar />
+      <Header />
+      
+    
     </div>
   )
 }
