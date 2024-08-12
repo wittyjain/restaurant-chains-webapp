@@ -3,13 +3,45 @@ import logo from '../../assets/light_logo.png'
 import fblogo from '../../assets/facebook-logo.svg'
 import instalogo from '../../assets/insta-logo.svg'
 import greaterthan from '../../assets/greater-than.svg'
+import { NavLink } from 'react-router-dom'
 
 function NavBar() {
+
+  const navList = [
+    {
+    text:"corporate",
+    page:"/corporate"
+},{
+  text:"philosophy",
+  page:"/corporate"
+},{
+  text:"restaurant",
+  page:"/restaurant"
+},{
+  text:"wedding&party",
+  page:"/wedding"
+},{
+  text:"recruit",
+  page:"/recruit"
+},{
+  text:"magazine",
+  page:"/magazine"
+},{
+  text:"news",
+  page:"/news"
+},
+]
+
   return (
-    <div className='text-white bg-black h-28 flex justify-between uppercase  px-3 py-2 items-center opacity-80 sticky z-[20] top-0 '>
+    <div className='text-white bg-black h-28 flex gap-5 justify-between uppercase  px-3 py-2 items-center opacity-80 sticky z-[20] top-0 '>
       <img src={logo} alt="logo" className='h-auto' />
       <ul className='flex gap-x-4 text-xs font-semibold  tracking-widest'>
-        <li className=' hover:text-gray-500 hover:opacity-90 cursor-pointer duration-200'>corporate</li>
+
+      {navList.map((item) => (
+        <li className=' hover:text-gray-500 hover:opacity-90 cursor-pointer duration-200' key={item.text}><NavLink to={item.page}  >{item.text}</NavLink></li>
+      ))}
+
+        {/* <li className=' hover:text-gray-500 hover:opacity-90 cursor-pointer duration-200'>corporate</li>
         <li>philosophy</li>
         <li>restaurant</li>
         <li>wedding&party</li>
@@ -17,7 +49,7 @@ function NavBar() {
         <li>magazine</li>
         <li>news</li>
         <li><img src={fblogo} alt="" className='max-w-6' /></li>
-        <li><img src={instalogo} alt="" /></li>
+        <li><img src={instalogo} alt="" /></li> */}
       </ul>
 
       <div>
