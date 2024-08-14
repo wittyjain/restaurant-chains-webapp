@@ -29,13 +29,7 @@ function Header() {
       >
         <source src={hugevid} />
       </video>
-      <Fade
-        arrows={false}
-        duration={1000}
-        transitionDuration={500}
-        tras
-        easing={"ease"}
-      >
+      <Fade arrows={false} easing={"ease"}>
         <img
           src={heroImages[imageIndex]}
           alt=""
