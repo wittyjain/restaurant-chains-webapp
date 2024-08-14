@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/light_logo.png";
 import fblogo from "../../assets/facebook-logo.svg";
 import instalogo from "../../assets/insta-logo.svg";
@@ -8,6 +8,8 @@ import { RxCross1 } from "react-icons/rx";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 function NavBar() {
+  // const [toggle, setToggle] = useState(null);
+
   const navList = [
     {
       text: "corporate",
@@ -39,21 +41,31 @@ function NavBar() {
     },
   ];
 
+  const handleClick = () => {
+    document.getElementById("nav-box").classList.toggle("hidden");
+  };
+
   return (
     <div className="relative">
-      <div className="fixed top-0 right-0 left-0  text-white bg-black  md:flex gap-5 justify-between uppercase  px-3 py-5 items-center md:opacity-80  z-[20] hidden ">
+      <div className="fixed top-0 right-0 left-0  text-white bg-black  md:flex gap-5 justify-between uppercase  px-3 py-5 items-center md:opacity-80  z-[20] ">
         <ul className="flex justify-between my-4 mx-2 items-center sticky">
           <li>
             <img src={logo} alt="logo" className="md:h-auto md:max-w-xl h-6 " />
           </li>
-          {/* <ul className="md:hidden">
-          <li>
-            <GiHamburgerMenu className="size-6 cursor-pointer md:hidden" />
-          </li>
-        </ul> */}
+          <ul className="md:hidden">
+            <li>
+              <GiHamburgerMenu
+                className="size-6 cursor-pointer md:hidden"
+                onClick={handleClick}
+              />
+            </li>
+          </ul>
         </ul>
 
-        <ul className="md:flex md:gap-x-4 items-center md:text-xs font-semibold  tracking-widest  flex-row text-sm">
+        <ul
+          id="nav-box"
+          className="md:flex md:gap-x-4 items-center md:text-xs font-semibold  tracking-widest  flex-row text-sm hidden	"
+        >
           {navList.map((item) => (
             <li
               className=" hover:text-gray-500 hover:opacity-90 cursor-pointer duration-200 mb-8 md:mb-0 border-b-2 md:border-none pb-2 md:pb-0"
@@ -72,10 +84,13 @@ function NavBar() {
             </li>
           </ul>
 
-          {/* <button className="uppercase font-bold md:hidden flex items-center gap-1  mx-auto mt-6">
-          <RxCross1 className="text-white " />
-          close
-        </button> */}
+          <button
+            className="uppercase font-bold md:hidden flex items-center gap-1  mx-auto mt-6"
+            onClick={handleClick}
+          >
+            <RxCross1 className="text-white " />
+            close
+          </button>
 
           {/* <li className=' hover:text-gray-500 hover:opacity-90 cursor-pointer duration-200'>corporate</li>
         <li>philosophy</li>
