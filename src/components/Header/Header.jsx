@@ -23,7 +23,7 @@ function Header() {
         autoPlay
         loop
         muted
-        className="fixed top-0 left-0 w-full h-full object-cover z-0 hidden md:block"
+        className="top-0 left-0 w-full h-full object-cover z-0 hidden md:block"
       >
         <source src={hugevid} />
       </video>
