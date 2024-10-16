@@ -47,7 +47,7 @@ function NavBar() {
 
   return (
     <div className="relative">
-      <div className="fixed top-0 right-0 left-0  text-white bg-black  md:flex gap-5 justify-between uppercase  px-3 py-5 items-center md:opacity-80  z-[20] ">
+      <div className="fixed top-0 right-0 left-0  text-white bg-black  md:flex gap-5 justify-between uppercase  px-3 py-5 items-center opacity-80  z-[20] ">
         <ul className="flex justify-between my-4 mx-2 items-center sticky">
           <li>
             <img src={logo} alt="logo" className="md:h-auto md:max-w-xl h-6 " />

@@ -18,7 +18,7 @@ function Header() {
   console.log(imageIndex);
 
   return (
-    <div className="relative h-screen overflow-hidden ]">
+    <div className="relative h-screen overflow-hidden ">
       <video
         autoPlay
         loop
@@ -31,7 +31,7 @@ function Header() {
         <img
           src={heroImages[imageIndex]}
           alt=""
-          className="w-full h-full object-cover fixed md:hidden"
+          className="w-full h-full object-cover md:hidden"
         />
       </Fade>
     </div>
